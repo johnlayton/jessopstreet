@@ -4,6 +4,8 @@ plugins {
     id("base")
     id("jessopstreet")
     id("maven-publish")
+
+    id("fr.brouillard.oss.gradle.jgitver") version "0.10.0-rc03"
 }
 
 repositories {
@@ -17,7 +19,6 @@ dependencies {
 }
 
 group = "com.github.johnlayton"
-version = "0.0.0-SNAPSHOT"
 
 val download = tasks.register<DownloadGradle>("download") {
     gradleVersion.set(jessopstreet.gradleVersion)
@@ -40,4 +41,10 @@ publishing {
             artifact(bundle)
         }
     }
+}
+
+jgitver {
+    useSnapshot = true
+    useDistance = false
+    nonQualifierBranches = "main"
 }
