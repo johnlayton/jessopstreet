@@ -12,9 +12,9 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("jessopstreet") {
-            id = "jessopstreet"
-            implementationClass = "com.github.johnlayton.JessopStreetPlugin"
+        register("gradle-bundle") {
+            id = "gradle-bundle"
+            implementationClass = "com.github.johnlayton.GradleBundlePlugin"
         }
     }
 }

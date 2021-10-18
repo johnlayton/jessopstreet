@@ -38,7 +38,7 @@ abstract class DownloadGradle : DefaultTask() {
     }
 }
 
-class JessopStreetPlugin : Plugin<Project> {
+class GradleBundlePlugin : Plugin<Project> {
     override fun apply(project: Project): Unit = project.run {
         project.extensions.create<JessopStreetExtension>("jessopstreet")
     }

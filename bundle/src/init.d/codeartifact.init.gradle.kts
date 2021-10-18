@@ -7,7 +7,7 @@ import software.amazon.awssdk.services.codeartifact.model.GetAuthorizationTokenR
 
 initscript {
     dependencies {
-        classpath(fileTree("${initscript?.sourceFile?.parentFile}/lib") { include("*.jar") })
+        classpath(fileTree("${initscript.sourceFile?.parentFile}/lib") { include("*.jar") })
     }
 }
 
